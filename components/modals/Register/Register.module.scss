@@ -1,0 +1,179 @@
+@import "../../../styles/variables";
+
+.back {
+  position:     absolute;
+  z-index:      1;
+  left:         2rem;
+  top:          2rem;
+  font-size:    16px;
+  font-weight:  bold;
+  padding-left: 1.75rem;
+  cursor:       pointer;
+  &:before {
+    content:         '';
+    position:        absolute;
+    left:            0;
+    top:             50%;
+    transform:       translate(0, -50%) rotate(180deg);
+    background:      url("../../../public/icons/right-arrow.svg") center center no-repeat;
+    background-size: contain;
+    width:           1.25rem;
+    height:          1.25rem;
+  }
+  &:hover, &:active {
+    opacity: .7;
+  }
+}
+
+.login {
+  display:     none;
+  font-size:   13px;
+  font-weight: bold;
+  cursor:      pointer;
+  color:       $blackColor;
+  &:hover, &:active {
+    opacity: .7;
+  }
+}
+
+.popupRight {
+  width:         49%;
+  padding-right: 9%;
+  h1 {
+    margin-bottom:   1.5rem;
+    line-height:     1.1;
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+  }
+  .continue {
+    width: 100%;
+  }
+  .signUp {
+    text-align: center;
+    padding:    1rem 0;
+  }
+  .buttons {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    button {
+      border-radius: 0.5rem;
+      display:       flex;
+      align-items:   center;
+      width:         100%;
+    }
+    .facebook, .google {
+      max-width: 167px;
+      i {
+        padding: 0.75rem 1rem;
+        &:before {
+          font-size: 18px;
+        }
+      }
+      span {
+        font-size:   20px;
+        font-weight: bold;
+        line-height: 1;
+        text-align:  center;
+        padding:     0.75rem 0;
+        display:     inline-block;
+        width:       117px;
+      }
+    }
+    .facebook {
+      border:        solid 2px $secondColor;
+
+      margin-right: 2rem;
+      background-color: #2B509A;
+
+      span {
+        color: $whiteColor;
+      }
+      i {
+        &:before {
+          color: $whiteColor;
+        }
+      }
+    }
+    .google {
+      border:        solid 2px $whiteColor;
+
+      background-color: #FFFFFF;
+
+      span {
+      }
+      i {
+        &:before {
+          color:     $blackColor;
+        }
+      }
+    }
+  }
+  .checkbox {
+    position:     relative;
+    transform:    translate(0, -100%);
+  }
+}
+
+.success {
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  text-align:      center;
+  padding-right:   9%;
+  width:           48.5%;
+  img {
+    max-width: 200px;
+    width:     50%;
+    margin:    4rem auto 1.75rem auto;
+    display:   none;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .back {
+    display: none;
+  }
+  .login {
+    display: block;
+  }
+  .popupRight {
+    width:   100%;
+    padding: 0 1rem;
+    .buttons {
+      .google, .facebook {
+        // width: 48%;
+        i {
+          padding: 0.5rem 0.75rem;
+          &:before {
+            font-size: 16px;
+          }
+        }
+        span {
+          font-size: 1rem;
+          // padding:   0.5rem 0;
+          // width:     100%;
+        }
+      }
+      .facebook {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .success {
+    width:         100%;
+    padding-right: 0;
+    h3 {
+      font-size: 1.75rem;
+    }
+    img {
+      display: flex;
+    }
+  }
+}

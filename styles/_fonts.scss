@@ -1,0 +1,56 @@
+@font-face {
+  // normal
+  font-family: Apercu;
+  font-weight: 300;
+  font-style:  normal;
+  src:         url('../public/fonts/Apercu/apercu_light.otf') format('opentype');
+}
+
+
+@font-face {
+  // normal
+  font-family: Apercu;
+  font-weight: normal;
+  font-style:  normal;
+  src:         url('../public/fonts/Apercu/apercu_regular_pro.otf') format('opentype');
+}
+
+@font-face {
+  // bold
+  font-family: Apercu;
+  font-style:  normal;
+  font-weight: bold;
+  src:         url('../public/fonts/Apercu/apercu_bold_pro.otf') format('opentype');
+}
+
+@font-face {
+  // italic
+  font-family: Apercu;
+  font-style:  italic;
+  src:         url('../public/fonts/Apercu/apercu_regular_italic_pro.otf') format('opentype');
+}
+
+@font-face {
+  // bold italic
+  font-family: Apercu;
+  font-weight: bold;
+  font-style:  italic;
+  src:         url('../public/fonts/Apercu/apercu_bold_italic_pro.otf') format('opentype');
+}
+
+
+@font-face {
+  // bold
+  font-family: ITCAvantGardeGothicPro;
+  src:         url("../public/fonts/ITCAvantGarde/ITCAvantGardeStdBold.otf") format('opentype');
+  font-weight: bold;
+  font-style:  normal;
+}
+
+@font-face {
+  // normal
+  font-family: ITCAvantGardeGothicPro;
+  src:         url("../public/fonts/ITCAvantGarde/ITCAvantGardeStdBk.otf") format('opentype');
+  font-weight: normal;
+  font-style:  normal;
+}

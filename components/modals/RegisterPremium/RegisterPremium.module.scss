@@ -1,0 +1,89 @@
+@import "../../../styles/variables";
+
+.popupRight {
+  width:       42%;
+  padding-top: 3%;
+  padding-right: 55px;
+  h1 {
+    margin-bottom:   1.875rem;
+    line-height:     1.1;
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+  }
+  .continue {
+    width: 100%;
+    min-width: auto;
+  }
+  .signUp {
+    text-align: center;
+    padding:    1rem 0;
+  }
+  .buttons {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    button {
+      border-radius: 0.5rem;
+      border:        solid 2px $secondColor;
+      display:       flex;
+      align-items:   center;
+      width:         100%;
+    }
+    .facebook, .google {
+      max-width: 167px;
+      i {
+        padding: 0.75rem 1rem;
+        &:before {
+          color:     $secondColor;
+          font-size: 18px;
+        }
+      }
+      span {
+        font-size:   20px;
+        font-weight: bold;
+        line-height: 1;
+        text-align:  center;
+        color:       $secondColor;
+        border-left: solid 2px $secondColor;
+        padding:     0.75rem 0;
+        display:     inline-block;
+        width:       117px;
+      }
+    }
+    .facebook {
+      margin-right: 2rem;
+    }
+  }
+  .checkbox {
+    position:     relative;
+    transform:    translate(0, -100%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .popupRight {
+    width: 100%;
+    padding-right: 0;
+    .buttons {
+      .google, .facebook {
+        width: 48%;
+        min-width: 120px;
+        i {
+          padding: 0.5rem 0.75rem;
+          &:before {
+            font-size: 16px;
+          }
+        }
+        span {
+          font-size: 1rem;
+          padding:   0.5rem 0;
+          width:     100%;
+        }
+      }
+      .facebook {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

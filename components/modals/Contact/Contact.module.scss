@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+
+.popupRight {
+  width:   100%;
+  padding: 1.5rem 2rem 2.875rem 2rem;
+  h1 {
+    margin-bottom:   0.5rem;
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    width:           100%;
+    color:           $mainColor;
+    font-size:       2.5rem;
+  }
+  h3 {
+    padding-left: 0.75rem;
+    span {
+      opacity:     0.5;
+      font-weight: normal;
+    }
+  }
+  .continue {
+    width:      100%;
+    margin-top: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .popupRight {
+    padding: 2rem 1rem;
+    h1 {
+      font-size:     1.75rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../../styles/variables";
+
+.popupRight {
+  width:      100%;
+  padding:    36px 36px 8.5% 36px;
+  background: #FF9200;
+
+  h1 {
+    margin-bottom:   2.5rem;
+    display:         flex;
+    align-items:     center;
+    justify-content: left;
+    width:           100%;
+    color:           $whiteColor;
+    p {
+      margin-left: 25px;
+    }
+  }
+  h3 {
+    padding-left: 0.75rem;
+    span {
+      opacity:     0.5;
+      font-weight: normal;
+    }
+  }
+  label {
+    span {
+      color: white;
+
+    }
+  }
+  .create {
+    font-size:   16px;
+    font-weight: normal;
+    color:       $whiteColor;
+    cursor:      pointer;
+    &:hover, &:active {
+      opacity: .7;
+    }
+  }
+  .continue {
+    width:         100%;
+    margin-top:    34px;
+    background:    #FF9200;
+    border:        2px solid #FFFFFF;
+    border-radius: 8px;
+  }
+  .signUp {
+    text-align: center;
+    padding:    1.25rem 0;
+    color:      white;
+  }
+  .buttons {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    button {
+      border-radius: 0.5rem;
+      display:       flex;
+      align-items:   center;
+      width:         100%;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .popupRight {
+    padding: 36px 16px 8.5% 16px;
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    .create {
+      font-size: 0.75rem;
+    }
+  }
+}

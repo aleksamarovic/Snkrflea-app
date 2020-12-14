@@ -1,0 +1,104 @@
+@import "../../../styles/variables";
+
+.popupRight {
+  width:      38%;
+  text-align: center;
+  min-width:  390px;
+  padding:    56px 8% 0 1rem;
+  .plans {
+    li {
+      display:         flex;
+      justify-content: space-between;
+      align-items:     center;
+      font-size:       18px;
+      font-weight:     bold;
+      line-height:     1.38;
+      padding:         0.5rem 0;
+      text-align:      left;
+      &.free, &.total {
+        font-weight: normal;
+      }
+      &.total {
+        border-top: 1px solid $blackColor;
+        margin-top: 1rem;
+        padding:    1rem 0;
+      }
+      span {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  .renews {
+    font-size: 13px;
+    padding:   1rem 0 1rem 0;
+  }
+  button {
+    width:         100%;
+    min-width:     100%;
+    margin-top:    1.25rem;
+    margin-bottom: 1rem;
+    &.stripe {
+      background-color: transparent;
+      border:           1px solid #635bff;
+      color:            #635bff;
+      display:          inline-block;
+      width:            auto;
+      min-width:        auto;
+      padding:          8px 14px;
+      font-size:        14px;
+      border-radius:    6px;
+      span {
+        color:       #635bff;
+        font-weight: bold;
+      }
+    }
+  }
+  h1 {
+    font-size:       1.75rem;
+    margin-bottom:   0.875rem;
+    line-height:     1.1;
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+  }
+}
+
+.success {
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  text-align:      center;
+  padding-right:   2%;
+  width:           41.5%;
+  img {
+    max-width: 200px;
+    width:     50%;
+    margin:    4rem auto 1.75rem auto;
+    display:   none;
+  }
+  a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .popupRight {
+    width:     100%;
+    padding:   18px 31px;
+    min-width: 100%;
+    .renews {
+      padding:    0 0 1rem 0;
+      text-align: left;
+    }
+  }
+
+  .success {
+    width:         100%;
+    padding-right: 0;
+    h3 {
+      font-size: 1.75rem;
+    }
+    img {
+      display: flex;
+    }
+  }
+}

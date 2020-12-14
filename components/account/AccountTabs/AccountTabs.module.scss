@@ -1,0 +1,55 @@
+@import "../../../styles/variables";
+
+.menu {
+  padding:       0.25rem;
+  position:      relative;
+  margin-bottom: .5rem;
+  &:before {
+    content:    '';
+    position:   absolute;
+    background: $whiteColor;
+    z-index:    -1;
+    left:       0;
+    top:        0;
+    height:     100%;
+    width:      100%;
+  }
+  .list {
+    display: flex;
+    padding: 0 0 0 86px;
+    .item {
+      a {
+        margin:          0 28px 0 0;
+        font-size:       20px;
+        font-weight:     normal;
+        line-height:     1.6;
+        text-decoration: none;
+        cursor:          pointer;
+        font-family:     ITCAvantGardeGothicPro, sans-serif;
+        &.active {
+          font-weight: bold;
+        }
+        &:active, &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    .list {
+      align-items:     center;
+      padding:         0;
+      justify-content: space-between;
+      max-width:       400px;
+      .item {
+        a {
+          margin:    0;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

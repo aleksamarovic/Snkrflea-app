@@ -1,0 +1,202 @@
+@import "./variables";
+
+.announcement {
+  background-color: white;
+  padding:          9px;
+  text-align:       center;
+
+  box-shadow:       0 0 10px 0 rgba(132, 80, 2, 0.1);
+  h6 {
+    color:       $mainColor;
+    font-weight: normal;
+  }
+  span {
+    color:       $mainColor;
+    font-weight: bold;
+  }
+}
+
+.marketplace {
+
+  flex: 1 0 auto;
+  .marketplaceInner {
+    display:         flex;
+    align-items:     stretch;
+    justify-content: space-between;
+  }
+  .filters {
+    position:     relative;
+    padding:      1.15rem 2.5rem 1.15rem 0.9rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    max-width:    372px;
+    min-width:    282px;
+    width:        24%;
+    overflow-y:   scroll;
+    &::-webkit-scrollbar {
+      width: 0; /* width of the entire scrollbar */
+    }
+  }
+  .products {
+    flex:       1 1 auto;
+    padding:    2.5rem 1.5rem 0 3rem;
+    overflow-y: scroll;
+    height:     calc(100vh - 60.83px);
+    position:   relative;
+    &::-webkit-scrollbar {
+      width: 0; /* width of the entire scrollbar */
+    }
+    > h6 {
+      font-size:   14px;
+      font-weight: normal;
+      line-height: 1.57;
+      span {
+        font-weight:     bold;
+        color:           #ff9200;
+        text-decoration: underline;
+        cursor:          pointer;
+        &:hover, &:active {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .productsItems {
+    margin-bottom: 0.5rem;
+    .pagination {
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      padding:         1rem 0;
+      li {
+        margin: 0 .25rem;
+        a {
+          text-decoration:  none;
+          padding:          0.25rem 0.5rem;
+          border-radius:    0.15rem;
+          line-height:      1;
+          background-color: transparent;
+          color:            $mainColor;
+          user-select:      none;
+          &.previous {
+            color: $mainColor;
+          }
+          &.next {
+            color: $mainColor;
+          }
+        }
+        &.active {
+          a {
+            color:            $whiteColor;
+            background-color: $mainColor;
+          }
+        }
+        &.disabled {
+          a {
+            opacity:        .3;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+  .premium {
+    margin-top: 1.5rem;
+    padding:    0;
+    position:   relative;
+    > .premiumMobile {
+      display:   none;
+      position:  absolute;
+      z-index:   1;
+      left:      50%;
+      top:       50%;
+      transform: translate(-50%, -50%);
+      width:     90%;
+      min-width: auto;
+      max-width: 400px;
+    }
+    *:not(.premiumMobile) {
+      filter:         blur(4px);
+      pointer-events: none;
+      user-select:    none;
+    }
+  }
+  .addMobile, .addDesktop {
+    height:           calc(100vh - 60.83px);
+    display:          flex;
+    justify-content:  center;
+    align-items:      center;
+    width:            230px;
+    min-width:        230px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align:       center;
+    padding:          3rem 0;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  .addMobile {
+    display: none;
+    width:   100%;
+    margin:  1rem 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .marketplace {
+    .addDesktop {
+      display: none;
+    }
+    .addMobile {
+      height:  120px;
+      display: flex;
+    }
+  }
+}
+
+
+@media screen and (max-width: 786px) {
+  .marketplace {
+    .marketplaceInner {
+      flex-direction: column;
+      padding-top:    1.35rem;
+    }
+    .filters {
+      width:            100%;
+      max-width:        100%;
+      padding:          0;
+      text-align:       center;
+      border-right:     none;
+      overflow-y:       auto;
+      height:           auto;
+      position:         fixed;
+      z-index:          10;
+      bottom:           0;
+      left:             0;
+      background:       transparent;
+      &.show {
+        border-top: none;
+        position:   fixed;
+        z-index:    100;
+        left:       0;
+        top:        0;
+        width:      100%;
+        height:     100%;
+        background: #f2f1ed;
+        padding:    0;
+      }
+    }
+    .products {
+      padding:    0;
+      overflow-y: auto;
+      height:     auto;
+      > h6 {
+        padding: 1rem 0;
+      }
+    }
+    .premium {
+      > .premiumMobile {
+        display: block;
+      }
+    }
+  }
+}

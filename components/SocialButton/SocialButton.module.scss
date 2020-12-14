@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+
+.facebook, .google {
+  max-width: 167px;
+  i {
+    padding: 0.25rem 1rem;
+    &:before {
+      font-size: 24px;
+    }
+  }
+  span {
+    line-height: 1;
+    text-align:  left;
+    padding:     0.75rem 0 0.75rem 3%;
+    display:     inline-block;
+    width:       117px;
+    font-family: ITCAvantGardeGothicPro, sans-serif;
+    font-size:   16px;
+    font-weight: 500;
+  }
+}
+
+.facebook {
+  border:           solid 2px $secondColor;
+  margin-right:     2rem;
+  background-color: #2B509A;
+  span {
+    color: $whiteColor;
+  }
+  i {
+    &:before {
+      color: $whiteColor;
+    }
+  }
+}
+
+.google {
+  border:           solid 2px $whiteColor;
+  background-color: #FFFFFF;
+  i {
+    &:before {
+      color:     $blackColor;
+      font-size: 20px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 567px) {
+  .google, .facebook {
+    max-width: 130px;
+    i {
+      padding: 0.5rem 0.75rem;
+      &:before {
+        font-size: 16px;
+      }
+    }
+    span {
+      font-size: 1rem;
+      width:     77px;
+    }
+  }
+  .facebook {
+    margin-right: 2rem;
+  }
+}

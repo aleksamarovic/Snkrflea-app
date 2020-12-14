@@ -1,0 +1,139 @@
+@import "../../../../styles/variables";
+
+.popup {
+  background: rgba(0, 0, 0, 0.6);
+  position:   fixed;
+  z-index:    200;
+  left:       0;
+  top:        0;
+  width:      100%;
+  height:     100%;
+  overflow:   auto;
+  .close {
+    position: absolute;
+    z-index:  1;
+    right:    1rem;
+    top:      1rem;
+    width:    2rem;
+    height:   2rem;
+    cursor:   pointer;
+    &:before, &:after {
+      content:          '';
+      position:         absolute;
+      z-index:          1;
+      width:            85%;
+      height:           2px;
+      transform:        rotate(45deg) translate(-50%, 0%);
+      transform-origin: left;
+      background:       $mainColor;
+      left:             50%;
+      top:              50%;
+    }
+    &:after {
+      transform: rotate(-45deg) translate(-50%, 0%);
+    }
+    &:hover, &:active {
+      opacity: .7;
+    }
+  }
+  .popupInner {
+    margin:          7.75% auto 1rem auto;
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: space-between;
+    width:           90%;
+    max-width:       649px;
+    position:        relative;
+    z-index:         1;
+    box-shadow:      0 4px 20px 0 rgba(0, 0, 0, 0.2);
+    background:      #f2f1ed;
+  }
+  &.register {
+    .popupInner {
+      padding: 86px 3% 8.5% 3%;
+    }
+  }
+  &.login {
+    .close {
+      &:before, &:after {
+        background: $whiteColor;
+      }
+    }
+    .popupInner {
+      padding: 0;
+    }
+  }
+  &.premium {
+    .popupInner {
+      padding: 0;
+    }
+  }
+  &.plans {
+    h1 {
+      margin-bottom: 12px;
+    }
+    .popupInner {
+      padding: 0;
+    }
+  }
+  &.payment {
+    h1 {
+      margin-bottom: 28px;
+    }
+  }
+  &.productFullScreenInner {
+    .popupInner {
+      padding: 4rem 8rem;
+    }
+  }
+  &.report {
+    .close {
+      &:before, &:after {
+        background: #c80000;
+      }
+    }
+  }
+  &.contact {
+
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .popup {
+    .close {
+      &:before, &:after {
+        width: 65%;
+      }
+    }
+    .popupInner {
+      width: 100%;
+    }
+    &.register {
+      .popupInner {
+        padding: 67px 3% 8.5% 3%;
+        width:   100%;
+      }
+    }
+    &.premium {
+      .popupInner {
+        padding: 80px 6% 8.5% 6%;
+      }
+    }
+    &.plans {
+      .popupInner {
+        padding: 0;
+        width:   100%;
+      }
+    }
+    &.payment {
+      .popupInner {
+        padding: 0;
+      }
+    }
+    &.productFullScreenInner {
+      .popupInner {
+        padding: 2rem 3rem;
+      }
+    }
+  }
+}

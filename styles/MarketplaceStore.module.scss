@@ -1,0 +1,174 @@
+@import "./variables";
+
+.marketplace {
+  .marketplaceInner {
+    display:         flex;
+    flex-wrap:       wrap;
+    align-items:     stretch;
+    justify-content: space-between;
+    padding-left:    3.5%;
+  }
+  .marketplaceLeft {
+    padding: 2.75rem 0;
+    flex:    1 0 auto;
+    .breadCrumbs {
+      text-decoration: none;
+      padding-left:    2.5rem;
+      position:        relative;
+      margin-bottom:   3rem;
+      display:         inline-block;
+      &:before {
+        content:         '';
+        position:        absolute;
+        left:            0;
+        top:             50%;
+        transform:       translate(0, -50%) rotate(-180deg);
+        background:      url("../public/icons/right-arrow.svg") center center no-repeat;
+        background-size: contain;
+        width:           1rem;
+        height:          1rem;
+      }
+    }
+    .userWrapper {
+      padding-left: 4%;
+    }
+    .user {
+      img {
+        width:         95px;
+        margin-bottom: 2rem;
+      }
+      .description {
+        display:     flex;
+        align-items: center;
+        .info {
+          padding-right: 2rem;
+          img {
+            display:       none;
+            width:         12px;
+            margin-bottom: 0;
+            margin-right:  0.25rem;
+          }
+          h3 {
+            font-size:     28px;
+            margin-bottom: 0.5rem;
+            color:         $mainColor;
+          }
+          a {
+            text-decoration: none;
+            font-size:       18px;
+          }
+        }
+        .instagram {
+          display:         flex;
+          flex-direction:  column;
+          align-items:     center;
+          justify-content: center;
+          text-align:      center;
+          img {
+            width:         23px;
+            margin-bottom: 0.5rem;
+          }
+          a {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .products {
+    flex:      1 0 auto;
+    padding:   0.75rem 0 0 0;
+    max-width: 714px;
+  }
+  .tabs {
+    padding: 2.4rem 0 0 0;
+    span {
+      font-size:      18px;
+      margin-right:   1.5rem;
+      display:        inline-block;
+      letter-spacing: -1.2px;
+      cursor:         pointer;
+      &.active {
+        font-weight:     bold;
+        text-decoration: underline;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &:active {
+        opacity: .7;
+      }
+    }
+  }
+  .productsItems {
+    margin-bottom: 0.5rem;
+  }
+  .addMobile, .addDesktop {
+    margin:           2.5rem 2rem;
+    display:          flex;
+    justify-content:  center;
+    align-items:      center;
+    width:            230px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align:       center;
+    padding:          3rem 0;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  .addMobile {
+    display: none;
+    width:   100%;
+    margin:  1rem 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .marketplace {
+    .addDesktop {
+      display: none;
+    }
+    .addMobile {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .marketplace {
+    .marketplaceInner {
+      flex-direction: column;
+      padding-top:    1.35rem;
+      padding-left:   0;
+    }
+    .marketplaceLeft {
+      padding: 1rem 0;
+      .userWrapper {
+        padding-left: 0;
+      }
+      .user {
+        margin-bottom: 2.5rem;
+        img {
+          margin-bottom: 0.5rem;
+        }
+        .description {
+          .info {
+            img {
+              display: inline-block;
+            }
+          }
+          .instagram {
+            display: none;
+          }
+        }
+      }
+    }
+    .products {
+      padding: 0;
+    }
+    .tabs {
+      padding: 0.5rem 0;
+    }
+  }
+}
+
